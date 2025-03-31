@@ -9,7 +9,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const TELEGRAM_BOT_TOKEN = "7773981984:AAGWW-K8lSCXOKmaXzP9zaoyseihw0o_rUop"; // Substitua pelo token do seu bot
-const TELEGRAM_CHAT_ID = "-1002652745734"; // Substitua pelo ID do chat (ou grupo) para onde quer enviar
+const TELEGRAM_CHAT_ID = "1002597649390"; // Substitua pelo ID do chat (ou grupo) para onde quer enviar
 
 app.post("/send-location", async (req, res) => {
   const { latitude, longitude, maps } = req.body;
@@ -18,8 +18,8 @@ app.post("/send-location", async (req, res) => {
 
   try {
     // Envia a localização para o Telegram
-    await axios.post(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
-      chat_id: TELEGRAM_CHAT_ID,
+    await axios.post(`https://api.telegram.org/bot${7773981984:AAGWW-K8lSCXOKmaXzP9zaoyseihw0o_rUop}/sendMessage`, {
+      chat_id: 1002597649390,
       text: message,
     });
 
